@@ -1,1 +1,3 @@
 # thirdHomework
+1. The first part of this code was to do the logic behind the input for the character length of the password. In order to achieve this, I coded a logic to validate the number range and the type of the input. I did this using a while statement so the user is only allowed to go on if all the conditions are satisfied.
+2. The second part of my code is basically an if statement for each different case where the user selected different combinations and each of them has a for statement that will generate the password using the criteria the user defined with the prompt. For this part I had to use the random function around arrays.
