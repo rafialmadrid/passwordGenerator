@@ -14,14 +14,14 @@ function writePassword() {
   var confirmLowerCase = confirm('Would you like to have lower cases?');
   var confirmUpperCase = confirm('Woul you like to have upper cases?');
   var confirmNumeric = confirm('Woul you like to have numbers?');
-  var confirmSpecialChar = confirm('Woul you like to have special characters?')
+  var confirmSpecialChar = confirm('Woul you like to have special characters?');
 
   while (confirmLowerCase === false && confirmUpperCase === false && confirmNumeric === false && confirmSpecialChar === false) {
     alert('You should at least select one type of character');
     var confirmLowerCase = confirm('Would you like to have lower cases?');
     var confirmUpperCase = confirm('Woul you like to have upper cases?');
     var confirmNumeric = confirm('Woul you like to have numbers?');
-    var confirmSpecialChar = confirm('Woul you like to have special characters?')
+    var confirmSpecialChar = confirm('Woul you like to have special characters?');
   }
 
   Number(passwordLength);
@@ -360,6 +360,98 @@ function writePassword() {
           var password = upperCase[randomUpperCase]+password;
         }
       
+      }
+  
+    }
+
+       //lower case true
+
+  if (confirmLowerCase===true && confirmUpperCase===false && confirmNumeric===false & confirmSpecialChar===false) {
+
+    var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var charType = [0];
+    var password = "";
+      
+      var randomChar = Math.floor (Math.random()*charType.length);
+  
+      for (let index = 0; index < passwordLength; index++) {
+        
+        var randomChar = Math.floor (Math.random()*charType.length);
+      
+        if (randomChar===0) {
+          var randomLowerCase = Math.floor (Math.random()*lowerCase.length);
+          var password = lowerCase[randomLowerCase]+password;
+        }
+    
+      }
+  
+    }
+
+    
+   //Upper
+
+  if (confirmLowerCase===false && confirmUpperCase===true && confirmNumeric===false & confirmSpecialChar===false) {
+
+    var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    var charType = [0];
+    var password = "";
+      
+      var randomChar = Math.floor (Math.random()*charType.length);
+  
+      for (let index = 0; index < passwordLength; index++) {
+        
+        var randomChar = Math.floor (Math.random()*charType.length);
+      
+        if (randomChar===0) {
+          var randomUpperCase = Math.floor (Math.random()*upperCase.length);
+          var password = upperCase[randomUpperCase]+password;
+        }
+      }
+  
+    }
+
+           //numeroc case true
+
+  if (confirmLowerCase===false && confirmUpperCase===false && confirmNumeric===true & confirmSpecialChar===false) {
+
+    var numbers = ["0","1","2","3","4","5","6","7","8","9"];
+    var charType = [0];
+    var password = "";
+      
+      var randomChar = Math.floor (Math.random()*charType.length);
+  
+      for (let index = 0; index < passwordLength; index++) {
+        
+        var randomChar = Math.floor (Math.random()*charType.length);
+      
+        if (randomChar===0) {
+          var randomNumber = Math.floor (Math.random()*numbers.length);
+          var password = numbers[randomNumber]+password;
+        }
+    
+      }
+  
+    }
+
+            //special char case
+
+  if (confirmLowerCase===false && confirmUpperCase===false && confirmNumeric===false & confirmSpecialChar===true) {
+
+    var specialChar = ["!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","\\"];
+    var charType = [0];
+    var password = "";
+      
+      var randomChar = Math.floor (Math.random()*charType.length);
+  
+      for (let index = 0; index < passwordLength; index++) {
+        
+        var randomChar = Math.floor (Math.random()*charType.length);
+      
+        if (randomChar===0) {
+          var randomSpecialChar = Math.floor (Math.random()*specialChar.length);
+          var password = specialChar[randomSpecialChar]+password;
+        }
+    
       }
   
     }
